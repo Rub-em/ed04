@@ -9,6 +9,7 @@ public class Agenda {
         this.contacts = new ArrayList<>();
     }
 
+    /** Metodo para añadir contactos*/
     public void addContact(String name, String phone) {
         boolean exists = false;
         for (Contacto c : contacts) {
@@ -24,7 +25,7 @@ public class Agenda {
             contacts.add(newContact);
         }
     }
-
+/** Metodo para borrar contactos */
     public void removeContact(String name) {
         Iterator<Contacto> it = contacts.iterator();
 
@@ -36,7 +37,7 @@ public class Agenda {
             }
         }
     }
-
+/** Metodo para modificar el telefono de un contacto */
     public void modifyPhoneNumber(String name, String oldPhone, String newPhone) {
         for (Contacto c : contacts) {
             if (c.getName().equalsIgnoreCase(name)) {
@@ -50,7 +51,7 @@ public class Agenda {
             }
         }
     }
-
+/** metodo parac delvolver contactos */
     public List<Contacto> getContacts() {
         return this.contacts;
     }
